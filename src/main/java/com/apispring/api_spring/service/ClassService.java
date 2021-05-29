@@ -34,6 +34,9 @@ public class ClassService {
     public List<Class> findClassByTeacherId(String teacherId){
         return repository.findClassByTeacher_TeacherID(teacherId);
     }
+    public List<Class> findClassByTeacherAndSemesterAndStudyingYear(String teacherId, int semester, int studyingYear){
+        return repository.findClassByTeacherAndAndSemesterAndAndStudyingYear(teacherId, semester, studyingYear);
+    }
 
 
 }

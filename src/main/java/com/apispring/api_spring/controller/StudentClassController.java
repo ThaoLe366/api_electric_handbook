@@ -127,6 +127,7 @@ public class StudentClassController {
     @GetMapping(MAPPING + "/{id_student}/{year}/{semester}")
     public List<StudentClass> findByStudentIdAndYearAndSemester(@PathVariable String id_student, @PathVariable int year, @PathVariable int semester){
         return studentClassService.findStudentClassByIdStudentAndYearAndSemester(id_student, year, semester);
+
     }
 
 }

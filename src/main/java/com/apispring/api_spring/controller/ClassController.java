@@ -29,8 +29,6 @@ public class ClassController {
     final  String  MainDomain="/class";
     @PostMapping(MainDomain)
     public Class createClass(@RequestBody Class mClass){
-
-
         return classService.createClass(mClass);
     }
 
@@ -83,6 +81,9 @@ public class ClassController {
       return   classService.findClassByTeacherId(teacherId);
     }
 
-
+    @GetMapping("class/teacher/{teacherId}/semester/{semester}/year/{year}")
+    public List<Class> getClassOfTeacher(@PathVariable String teacherId, @PathVariable int semester, @PathVariable int year){
+        return   classService.findClassByTeacherAndSemesterAndStudyingYear(teacherId,semester, year);
+    }
 
 }

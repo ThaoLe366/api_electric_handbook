@@ -14,4 +14,7 @@ public interface ClassRepository extends JpaRepository<Class,String> {
 
     @Query("select c from Class c where c.teacher.teacherId =  (:teacherID)")
     List<Class> findClassByTeacher_TeacherID(String teacherID);
+
+    @Query("select c from Class c where c.teacher.teacherId =  (:teacherID) and c.studyingYear = (:semester) and c.semester=(:semester)")
+    List<Class> findClassByTeacherAndAndSemesterAndAndStudyingYear(String teacherID, int semester, int studyingYear);
 }
