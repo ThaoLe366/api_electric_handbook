@@ -67,6 +67,7 @@ public class StudentService {
         oldStudent.setStudentBirthday(student.getStudentBirthday());
         //For update paddword
         Account oldAccount = oldStudent.getAccount();
+
         oldAccount.setPassword(student.getAccount().getPassword());
         oldStudent.setAccount(oldAccount);
 

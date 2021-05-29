@@ -18,7 +18,7 @@ import java.util.Date;
 public class StudentConfirmpaperId implements Serializable {
 
     @Column(name = "student_id")
-    private int studentId;
+    private String studentId;
 
     @Column(name = "required_time")
     private Date requiredTime;
