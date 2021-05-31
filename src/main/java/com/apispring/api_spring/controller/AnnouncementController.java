@@ -1,7 +1,6 @@
 package com.apispring.api_spring.controller;
 
 
-import com.apispring.api_spring.dto.AnnounceDTO;
 import com.apispring.api_spring.entity.Announcement;
 import com.apispring.api_spring.service.AnnouncementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,8 @@ public class AnnouncementController {
     private AnnouncementService service;
 
     @PostMapping("/announcement")
-    public AnnounceDTO save(@RequestBody AnnounceDTO announceDTO){
-        return service.save(announceDTO);
+    public Announcement save(@RequestBody Announcement announcement){
+        return service.save(announcement);
     }
 
     @GetMapping("/announcement")
